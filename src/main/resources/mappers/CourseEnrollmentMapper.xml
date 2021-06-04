@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="haksa_minjeong.mapper.CourseEnrollmentMapper">
+	<resultMap type="CourseEnrollment" id="CourseEnrollment">
+		<association property="student" javaType="Student"
+			autoMapping="true" />
+		<association property="course" javaType="Course"
+			autoMapping="true" />
+	</resultMap>
+	<select id="selectCourseEnrollmentById"
+		resultMap="CourseEnrollment">
+		select c.course_id, c.name as name, c.description, c.start_date,
+		c.end_date, s.stud_id, s.name, s.email from course_enrollment ce join courses c
+		on ce.course_id =
+		c.course_id
+		join students s on ce.stud_id = s.stud_id
+		where ce.stud_id = #{student.studId} and ce.course_id =
+		#{course.courseId};
+	</select>
+	<insert id="insertCourseEnrollment">
+		insert into course_enrollment
+		values (#{course.courseId}, #{student.studId})
+	</insert>
+	<update id="updateCourseEnrollment" parameterType="map">
+		update course_enrollment
+		set course_id = #{new_courseId}, stud_id = #{new_studId}
+		where course_id = #{old_courseId} and stud_id = #{old_studId}
+	</update>
+	<delete id="deleteCourseEnrollment">
+		delete from course_enrollment
+		where course_id = #{course.courseId} and stud_id = #{student.studId}
+	</delete>
+</mapper>

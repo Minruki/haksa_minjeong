@@ -1,0 +1,690 @@
+[DEBUG] [2021-06-04 18:58] testDataSource()
+[DEBUG] [2021-06-04 18:58] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-06-04 18:58] LoginTimeout 30
+[DEBUG] [2021-06-04 19:03] testOpenSession()
+[DEBUG] [2021-06-04 19:03] session org.apache.ibatis.session.defaults.DefaultSqlSession@3dd69f5a
+[DEBUG] [2021-06-04 19:03] testDataSource()
+[DEBUG] [2021-06-04 19:03] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-06-04 19:03] LoginTimeout 30
+[DEBUG] [2021-06-04 19:24] test01SelectCourseEnrollmentById()
+[DEBUG] [2021-06-04 19:24] test02InsertCourseEnrollment()
+[DEBUG] [2021-06-04 19:24] test03UpdateCourseEnrollment()
+[DEBUG] [2021-06-04 19:24] test04DeleteCourseEnrollment()
+[DEBUG] [2021-06-04 19:24] test01SelectCoursesByCondition()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: select course_id, name, description, start_date, end_date, tutor_id from courses WHERE tutor_id = ?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:24] <==      Total: 2
+[DEBUG] [2021-06-04 19:24] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] test02SelectCoursesByCondition()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: select course_id, name, description, start_date, end_date, tutor_id from courses WHERE name like ?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: %Java%(String)
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:24] <==      Total: 2
+[DEBUG] [2021-06-04 19:24] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] test03SelectCoursesByCondition()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: select course_id, name, description, start_date, end_date, tutor_id from courses WHERE start_date >= ?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 2013-02-01 00:00:00.0(Timestamp)
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 3, MyBatis3 Premier, MyBatis 3 framework, 2013-06-01, 2013-07-15, 2
+[DEBUG] [2021-06-04 19:24] <==      Total: 3
+[DEBUG] [2021-06-04 19:24] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [3 MyBatis3 Premier MyBatis 3 framework Sat Jun 01 00:00:00 KST 2013 Mon Jul 15 00:00:00 KST 2013 2]
+[DEBUG] [2021-06-04 19:24] test04SelectCaseCourses()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE tutor_id=?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:24] <==      Total: 2
+[DEBUG] [2021-06-04 19:24] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE name like ?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: %Java%(String)
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:24] <==      Total: 2
+[DEBUG] [2021-06-04 19:24] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] test05SelectWhereCourses()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 3, MyBatis3 Premier, MyBatis 3 framework, 2013-06-01, 2013-07-15, 2
+[DEBUG] [2021-06-04 19:24] <==      Total: 3
+[DEBUG] [2021-06-04 19:24] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [3 MyBatis3 Premier MyBatis 3 framework Sat Jun 01 00:00:00 KST 2013 Mon Jul 15 00:00:00 KST 2013 2]
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE tutor_id = ?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:24] <==      Total: 2
+[DEBUG] [2021-06-04 19:24] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE tutor_id = ? AND name like ?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 1(Integer), %Java%(String)
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:24] <==      Total: 2
+[DEBUG] [2021-06-04 19:24] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE end_date <= ?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 2021-06-04 19:24:29.596(Timestamp)
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 3, MyBatis3 Premier, MyBatis 3 framework, 2013-06-01, 2013-07-15, 2
+[DEBUG] [2021-06-04 19:24] <==      Total: 3
+[DEBUG] [2021-06-04 19:24] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [3 MyBatis3 Premier MyBatis 3 framework Sat Jun 01 00:00:00 KST 2013 Mon Jul 15 00:00:00 KST 2013 2]
+[DEBUG] [2021-06-04 19:24] test06SelectTrimCourses()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 3, MyBatis3 Premier, MyBatis 3 framework, 2013-06-01, 2013-07-15, 2
+[DEBUG] [2021-06-04 19:24] <==      Total: 3
+[DEBUG] [2021-06-04 19:24] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [3 MyBatis3 Premier MyBatis 3 framework Sat Jun 01 00:00:00 KST 2013 Mon Jul 15 00:00:00 KST 2013 2]
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE tutor_id=?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:24] <==      Total: 2
+[DEBUG] [2021-06-04 19:24] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE name like ?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: %Java%(String)
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:24] <==      Total: 2
+[DEBUG] [2021-06-04 19:24] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE tutor_id=? and name like ?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 1(Integer), %Java%(String)
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:24] <==      Total: 2
+[DEBUG] [2021-06-04 19:24] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] test07SelectCoursesForeachByTutors()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE tutor_id IN ( ? , ? )
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 1(Integer), 2(Integer)
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[TRACE] [2021-06-04 19:24] <==        Row: 3, MyBatis3 Premier, MyBatis 3 framework, 2013-06-01, 2013-07-15, 2
+[DEBUG] [2021-06-04 19:24] <==      Total: 3
+[DEBUG] [2021-06-04 19:24] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:24] Course [3 MyBatis3 Premier MyBatis 3 framework Sat Jun 01 00:00:00 KST 2013 Mon Jul 15 00:00:00 KST 2013 2]
+[DEBUG] [2021-06-04 19:24] test08insertCourses()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: insert into courses(course_id, name, description, start_date, end_date, tutor_id) values (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?)
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 4(Integer), mysql(String), database(String), 2021-06-04 19:24:29.622(Timestamp), 2021-06-04 19:24:29.622(Timestamp), 3(Integer), 5(Integer), mssql(String), database(String), 2021-06-04 19:24:29.622(Timestamp), 2021-06-04 19:24:29.622(Timestamp), 3(Integer), 6(Integer), mariaDb(String), database(String), 2021-06-04 19:24:29.622(Timestamp), 2021-06-04 19:24:29.622(Timestamp), 4(Integer)
+[DEBUG] [2021-06-04 19:24] <==    Updates: 3
+[DEBUG] [2021-06-04 19:24] test09UpdateCourses()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: update courses SET name=?, description=? where course_id = ?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: Îç∞Ïù¥ÌÑ∞Î≤†Ïù¥Ïä§(String), Oracle(String), 4(Integer)
+[DEBUG] [2021-06-04 19:24] <==    Updates: 1
+[DEBUG] [2021-06-04 19:24] test10DeleteCourses()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: delete from courses WHERE course_id IN ( ? , ? , ? )
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 4(Integer), 5(Integer), 6(Integer)
+[DEBUG] [2021-06-04 19:24] <==    Updates: 3
+[DEBUG] [2021-06-04 19:24] test10UpdateCourses()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: insert into courses(course_id, name, description, start_date, end_date, tutor_id) values (?, ?, ?, ?, ?, ?)
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 7(Integer), OracleXE(String), database(String), 2021-06-04 19:24:29.65(Timestamp), 2021-06-04 19:24:29.65(Timestamp), 2(Integer)
+[DEBUG] [2021-06-04 19:24] <==    Updates: 1
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: update courses SET name=?, description=? where course_id = ?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: Í≥µÏßúÎîîÎπÑ(String), Í≥µÏßú Îç∞Ïù¥ÌÑ∞Î≤†Ïù¥Ïä§(String), 7(Integer)
+[DEBUG] [2021-06-04 19:24] <==    Updates: 1
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE tutor_id=?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 3, MyBatis3 Premier, MyBatis 3 framework, 2013-06-01, 2013-07-15, 2
+[TRACE] [2021-06-04 19:24] <==        Row: 7, Í≥µÏßúÎîîÎπÑ, Í≥µÏßú Îç∞Ïù¥ÌÑ∞Î≤†Ïù¥Ïä§, 2021-06-04, 2021-06-04, 2
+[DEBUG] [2021-06-04 19:24] <==      Total: 2
+[DEBUG] [2021-06-04 19:24] Course [3 MyBatis3 Premier MyBatis 3 framework Sat Jun 01 00:00:00 KST 2013 Mon Jul 15 00:00:00 KST 2013 2]
+[DEBUG] [2021-06-04 19:24] Course [7 Í≥µÏßúÎîîÎπÑ Í≥µÏßú Îç∞Ïù¥ÌÑ∞Î≤†Ïù¥Ïä§ Fri Jun 04 00:00:00 KST 2021 Fri Jun 04 00:00:00 KST 2021 2]
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: delete from courses WHERE course_id IN ( ? )
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 7(Integer)
+[DEBUG] [2021-06-04 19:24] <==    Updates: 1
+[DEBUG] [2021-06-04 19:24] test12insertCourse()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: INSERT INTO COURSES(COURSE_ID, NAME, DESCRIPTION, START_DATE, END_DATE, TUTOR_ID) VALUES (?, ?,?,?,?,?)
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 7(Integer), oracle(String), database(String), 2021-06-04 19:24:29.671(Timestamp), 2021-06-04 19:24:29.671(Timestamp), 4(Integer)
+[DEBUG] [2021-06-04 19:24] <==    Updates: 1
+[DEBUG] [2021-06-04 19:24] test13SelectCourseById()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE course_id = ?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 7(Integer)
+[TRACE] [2021-06-04 19:24] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:24] <==        Row: 7, oracle, database, 2021-06-04, 2021-06-04, 4
+[DEBUG] [2021-06-04 19:24] <==      Total: 1
+[DEBUG] [2021-06-04 19:24] Course [7 oracle database Fri Jun 04 00:00:00 KST 2021 Fri Jun 04 00:00:00 KST 2021 4]
+[DEBUG] [2021-06-04 19:24] test14DeleteCourse()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: DELETE FROM COURSES WHERE COURSE_ID=?
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 7(Integer)
+[DEBUG] [2021-06-04 19:24] <==    Updates: 1
+[DEBUG] [2021-06-04 19:24] testGetCourseCountByTutor()
+[DEBUG] [2021-06-04 19:24] ==>  Preparing: { call course_total(?) }
+[DEBUG] [2021-06-04 19:24] ==> Parameters: 1(Integer)
+[DEBUG] [2021-06-04 19:24] test01SelectCourseEnrollmentById()
+[DEBUG] [2021-06-04 19:24] test02InsertCourseEnrollment()
+[DEBUG] [2021-06-04 19:24] test03UpdateCourseEnrollment()
+[DEBUG] [2021-06-04 19:24] test04DeleteCourseEnrollment()
+[DEBUG] [2021-06-04 19:27] test01SelectCourseEnrollmentById()
+[DEBUG] [2021-06-04 19:27] test02InsertCourseEnrollment()
+[DEBUG] [2021-06-04 19:27] test03UpdateCourseEnrollment()
+[DEBUG] [2021-06-04 19:27] test04DeleteCourseEnrollment()
+[DEBUG] [2021-06-04 19:29] test01SelectCourseEnrollmentById()
+[DEBUG] [2021-06-04 19:29] test02InsertCourseEnrollment()
+[DEBUG] [2021-06-04 19:29] test03UpdateCourseEnrollment()
+[DEBUG] [2021-06-04 19:29] test04DeleteCourseEnrollment()
+[DEBUG] [2021-06-04 19:30] test01SelectCourseEnrollmentById()
+[DEBUG] [2021-06-04 19:30] ==>  Preparing: select c.course_id, c.name as name, c.description, c.start_date, c.end_date, s.stud_id, s.name, s.email from course_enrollment ce join courses c on ce.course_id = c.course_id join students s on ce.stud_id = s.stud_id where ce.stud_id = ? and ce.course_id = ?;
+[DEBUG] [2021-06-04 19:30] ==> Parameters: 1(Integer), 1(Integer)
+[TRACE] [2021-06-04 19:30] <==    Columns: course_id, name, description, start_date, end_date, stud_id, name, email
+[TRACE] [2021-06-04 19:30] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1, Timothy, timothy@gmail.com
+[DEBUG] [2021-06-04 19:30] <==      Total: 1
+[DEBUG] [2021-06-04 19:30] test02InsertCourseEnrollment()
+[DEBUG] [2021-06-04 19:30] ==>  Preparing: insert into course_enrollment values (?, ?)
+[DEBUG] [2021-06-04 19:30] ==> Parameters: 3(Integer), 1(Integer)
+[DEBUG] [2021-06-04 19:30] <==    Updates: 1
+[DEBUG] [2021-06-04 19:30] test03UpdateCourseEnrollment()
+[DEBUG] [2021-06-04 19:30] ==>  Preparing: update course_enrollment set course_id = ?, stud_id = ? where course_id = ? and stud_id = ?
+[DEBUG] [2021-06-04 19:30] ==> Parameters: 3(Integer), 2(Integer), 3(Integer), 1(Integer)
+[DEBUG] [2021-06-04 19:30] <==    Updates: 1
+[DEBUG] [2021-06-04 19:30] test04DeleteCourseEnrollment()
+[DEBUG] [2021-06-04 19:30] ==>  Preparing: delete from course_enrollment where course_id = ? and stud_id = ?
+[DEBUG] [2021-06-04 19:30] ==> Parameters: 3(Integer), 2(Integer)
+[DEBUG] [2021-06-04 19:30] <==    Updates: 1
+[DEBUG] [2021-06-04 19:44] testDataSource()
+[DEBUG] [2021-06-04 19:44] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-06-04 19:44] LoginTimeout 30
+[DEBUG] [2021-06-04 19:45] testDataSource()
+[DEBUG] [2021-06-04 19:45] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-06-04 19:45] LoginTimeout 30
+[DEBUG] [2021-06-04 19:45] testDataSource()
+[DEBUG] [2021-06-04 19:45] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-06-04 19:45] LoginTimeout 30
+[DEBUG] [2021-06-04 19:45] testOpenSession()
+[DEBUG] [2021-06-04 19:45] session org.apache.ibatis.session.defaults.DefaultSqlSession@6a484130
+[DEBUG] [2021-06-04 19:45] test01SelectCourseEnrollmentById()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: select c.course_id, c.name as name, c.description, c.start_date, c.end_date, s.stud_id, s.name, s.email from course_enrollment ce join courses c on ce.course_id = c.course_id join students s on ce.stud_id = s.stud_id where ce.stud_id = ? and ce.course_id = ?;
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 1(Integer), 1(Integer)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, stud_id, name, email
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1, Timothy, timothy@gmail.com
+[DEBUG] [2021-06-04 19:45] <==      Total: 1
+[DEBUG] [2021-06-04 19:45] test02InsertCourseEnrollment()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: insert into course_enrollment values (?, ?)
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 3(Integer), 1(Integer)
+[DEBUG] [2021-06-04 19:45] <==    Updates: 1
+[DEBUG] [2021-06-04 19:45] test03UpdateCourseEnrollment()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: update course_enrollment set course_id = ?, stud_id = ? where course_id = ? and stud_id = ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 3(Integer), 2(Integer), 3(Integer), 1(Integer)
+[DEBUG] [2021-06-04 19:45] <==    Updates: 1
+[DEBUG] [2021-06-04 19:45] test04DeleteCourseEnrollment()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: delete from course_enrollment where course_id = ? and stud_id = ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 3(Integer), 2(Integer)
+[DEBUG] [2021-06-04 19:45] <==    Updates: 1
+[DEBUG] [2021-06-04 19:45] test01SelectCoursesByCondition()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: select course_id, name, description, start_date, end_date, tutor_id from courses WHERE tutor_id = ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:45] <==      Total: 2
+[DEBUG] [2021-06-04 19:45] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] test02SelectCoursesByCondition()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: select course_id, name, description, start_date, end_date, tutor_id from courses WHERE name like ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: %Java%(String)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:45] <==      Total: 2
+[DEBUG] [2021-06-04 19:45] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] test03SelectCoursesByCondition()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: select course_id, name, description, start_date, end_date, tutor_id from courses WHERE start_date >= ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 2013-02-01 00:00:00.0(Timestamp)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 3, MyBatis3 Premier, MyBatis 3 framework, 2013-06-01, 2013-07-15, 2
+[DEBUG] [2021-06-04 19:45] <==      Total: 3
+[DEBUG] [2021-06-04 19:45] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [3 MyBatis3 Premier MyBatis 3 framework Sat Jun 01 00:00:00 KST 2013 Mon Jul 15 00:00:00 KST 2013 2]
+[DEBUG] [2021-06-04 19:45] test04SelectCaseCourses()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE tutor_id=?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:45] <==      Total: 2
+[DEBUG] [2021-06-04 19:45] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE name like ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: %Java%(String)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:45] <==      Total: 2
+[DEBUG] [2021-06-04 19:45] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] test05SelectWhereCourses()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 3, MyBatis3 Premier, MyBatis 3 framework, 2013-06-01, 2013-07-15, 2
+[DEBUG] [2021-06-04 19:45] <==      Total: 3
+[DEBUG] [2021-06-04 19:45] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [3 MyBatis3 Premier MyBatis 3 framework Sat Jun 01 00:00:00 KST 2013 Mon Jul 15 00:00:00 KST 2013 2]
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE tutor_id = ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:45] <==      Total: 2
+[DEBUG] [2021-06-04 19:45] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE tutor_id = ? AND name like ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 1(Integer), %Java%(String)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:45] <==      Total: 2
+[DEBUG] [2021-06-04 19:45] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE end_date <= ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 2021-06-04 19:45:42.483(Timestamp)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 3, MyBatis3 Premier, MyBatis 3 framework, 2013-06-01, 2013-07-15, 2
+[DEBUG] [2021-06-04 19:45] <==      Total: 3
+[DEBUG] [2021-06-04 19:45] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [3 MyBatis3 Premier MyBatis 3 framework Sat Jun 01 00:00:00 KST 2013 Mon Jul 15 00:00:00 KST 2013 2]
+[DEBUG] [2021-06-04 19:45] test06SelectTrimCourses()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 3, MyBatis3 Premier, MyBatis 3 framework, 2013-06-01, 2013-07-15, 2
+[DEBUG] [2021-06-04 19:45] <==      Total: 3
+[DEBUG] [2021-06-04 19:45] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [3 MyBatis3 Premier MyBatis 3 framework Sat Jun 01 00:00:00 KST 2013 Mon Jul 15 00:00:00 KST 2013 2]
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE tutor_id=?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:45] <==      Total: 2
+[DEBUG] [2021-06-04 19:45] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE name like ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: %Java%(String)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:45] <==      Total: 2
+[DEBUG] [2021-06-04 19:45] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE tutor_id=? and name like ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 1(Integer), %Java%(String)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[DEBUG] [2021-06-04 19:45] <==      Total: 2
+[DEBUG] [2021-06-04 19:45] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] test07SelectCoursesForeachByTutors()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE tutor_id IN ( ? , ? )
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 1(Integer), 2(Integer)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30, 1
+[TRACE] [2021-06-04 19:45] <==        Row: 3, MyBatis3 Premier, MyBatis 3 framework, 2013-06-01, 2013-07-15, 2
+[DEBUG] [2021-06-04 19:45] <==      Total: 3
+[DEBUG] [2021-06-04 19:45] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 1]
+[DEBUG] [2021-06-04 19:45] Course [3 MyBatis3 Premier MyBatis 3 framework Sat Jun 01 00:00:00 KST 2013 Mon Jul 15 00:00:00 KST 2013 2]
+[DEBUG] [2021-06-04 19:45] test08insertCourses()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: insert into courses(course_id, name, description, start_date, end_date, tutor_id) values (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?)
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 4(Integer), mysql(String), database(String), 2021-06-04 19:45:42.525(Timestamp), 2021-06-04 19:45:42.525(Timestamp), 3(Integer), 5(Integer), mssql(String), database(String), 2021-06-04 19:45:42.525(Timestamp), 2021-06-04 19:45:42.525(Timestamp), 3(Integer), 6(Integer), mariaDb(String), database(String), 2021-06-04 19:45:42.525(Timestamp), 2021-06-04 19:45:42.525(Timestamp), 4(Integer)
+[DEBUG] [2021-06-04 19:45] <==    Updates: 3
+[DEBUG] [2021-06-04 19:45] test09UpdateCourses()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: update courses SET name=?, description=? where course_id = ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: µ•¿Ã≈Õ∫£¿ÃΩ∫(String), Oracle(String), 4(Integer)
+[DEBUG] [2021-06-04 19:45] <==    Updates: 1
+[DEBUG] [2021-06-04 19:45] test10DeleteCourses()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: delete from courses WHERE course_id IN ( ? , ? , ? )
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 4(Integer), 5(Integer), 6(Integer)
+[DEBUG] [2021-06-04 19:45] <==    Updates: 3
+[DEBUG] [2021-06-04 19:45] test10UpdateCourses()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: insert into courses(course_id, name, description, start_date, end_date, tutor_id) values (?, ?, ?, ?, ?, ?)
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 7(Integer), OracleXE(String), database(String), 2021-06-04 19:45:42.561(Timestamp), 2021-06-04 19:45:42.561(Timestamp), 2(Integer)
+[DEBUG] [2021-06-04 19:45] <==    Updates: 1
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: update courses SET name=?, description=? where course_id = ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: ∞¯¬•µ∫Ò(String), ∞¯¬• µ•¿Ã≈Õ∫£¿ÃΩ∫(String), 7(Integer)
+[DEBUG] [2021-06-04 19:45] <==    Updates: 1
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE tutor_id=?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 3, MyBatis3 Premier, MyBatis 3 framework, 2013-06-01, 2013-07-15, 2
+[TRACE] [2021-06-04 19:45] <==        Row: 7, ∞¯¬•µ∫Ò, ∞¯¬• µ•¿Ã≈Õ∫£¿ÃΩ∫, 2021-06-04, 2021-06-04, 2
+[DEBUG] [2021-06-04 19:45] <==      Total: 2
+[DEBUG] [2021-06-04 19:45] Course [3 MyBatis3 Premier MyBatis 3 framework Sat Jun 01 00:00:00 KST 2013 Mon Jul 15 00:00:00 KST 2013 2]
+[DEBUG] [2021-06-04 19:45] Course [7 ∞¯¬•µ∫Ò ∞¯¬• µ•¿Ã≈Õ∫£¿ÃΩ∫ Fri Jun 04 00:00:00 KST 2021 Fri Jun 04 00:00:00 KST 2021 2]
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: delete from courses WHERE course_id IN ( ? )
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 7(Integer)
+[DEBUG] [2021-06-04 19:45] <==    Updates: 1
+[DEBUG] [2021-06-04 19:45] test12insertCourse()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: INSERT INTO COURSES(COURSE_ID, NAME, DESCRIPTION, START_DATE, END_DATE, TUTOR_ID) VALUES (?, ?,?,?,?,?)
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 7(Integer), oracle(String), database(String), 2021-06-04 19:45:42.583(Timestamp), 2021-06-04 19:45:42.583(Timestamp), 4(Integer)
+[DEBUG] [2021-06-04 19:45] <==    Updates: 1
+[DEBUG] [2021-06-04 19:45] test13SelectCourseById()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: SELECT course_id, name, description, start_date, end_date, tutor_id FROM courses WHERE course_id = ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 7(Integer)
+[TRACE] [2021-06-04 19:45] <==    Columns: course_id, name, description, start_date, end_date, tutor_id
+[TRACE] [2021-06-04 19:45] <==        Row: 7, oracle, database, 2021-06-04, 2021-06-04, 4
+[DEBUG] [2021-06-04 19:45] <==      Total: 1
+[DEBUG] [2021-06-04 19:45] Course [7 oracle database Fri Jun 04 00:00:00 KST 2021 Fri Jun 04 00:00:00 KST 2021 4]
+[DEBUG] [2021-06-04 19:45] test14DeleteCourse()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: DELETE FROM COURSES WHERE COURSE_ID=?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 7(Integer)
+[DEBUG] [2021-06-04 19:45] <==    Updates: 1
+[DEBUG] [2021-06-04 19:45] testGetCourseCountByTutor()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: { call course_total(?) }
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 1(Integer)
+[DEBUG] [2021-06-04 19:45] test01SelectTutorByTutorId()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: select t.tutor_id , t.name as tutor_name , email , c.course_id , c.name , description , start_date , end_date from tutors t join courses c on t.tutor_id=c.tutor_id where t.tutor_id = ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:45] <==    Columns: tutor_id, tutor_name, email, course_id, name, description, start_date, end_date
+[TRACE] [2021-06-04 19:45] <==        Row: 1, John, john@gmail.com, 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15
+[DEBUG] [2021-06-04 19:45] test02InsertTutor()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: INSERT INTO TUTORS(TUTOR_ID, NAME, EMAIL, PHONE, ADDR_ID) VALUES (?, ?, ?, ?, ?)
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 5(Integer), mskim(String), net94@naver.com(String), 010-2222-2222(String), 2(Integer)
+[DEBUG] [2021-06-04 19:45] <==    Updates: 1
+[DEBUG] [2021-06-04 19:45] test03SelectTutorById()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: select tutor_id, name, email, phone, dob, bio, pic, addr_id from tutors where tutor_id = ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 5(Integer)
+[TRACE] [2021-06-04 19:45] <==    Columns: tutor_id, name, email, phone, dob, bio, pic, addr_id
+[TRACE] [2021-06-04 19:45] <==        Row: 5, mskim, net94@naver.com, 010-2222-2222, null, <<BLOB>>, <<BLOB>>, 2
+[DEBUG] [2021-06-04 19:45] <==      Total: 1
+[DEBUG] [2021-06-04 19:45] Tutor [tutorId=5, name=mskim, email=net94@naver.com, address=Address [2, null, null, null, null, null], phone=010-2222-2222, courses=null]
+[DEBUG] [2021-06-04 19:45] test04DeleteTutor()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: DELETE FROM TUTORS WHERE TUTOR_ID=?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 5(Integer)
+[DEBUG] [2021-06-04 19:45] <==    Updates: 1
+[DEBUG] [2021-06-04 19:45] test1InsertUserPic()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: insert into user_pics (id, name, pic, bio) values (?, ?, ?, ? )
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 2(Integer), Denmark(String), null, put some lengthy bio here(String)
+[DEBUG] [2021-06-04 19:45] test2GetUserPic()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: select id, name, pic, bio from user_pics where id = ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 2(Integer)
+[DEBUG] [2021-06-04 19:45] test3DeleteUserPic()
+[DEBUG] [2021-06-04 19:45] ==>  Preparing: delete from user_pics where id = ?
+[DEBUG] [2021-06-04 19:45] ==> Parameters: 2(Integer)
+[DEBUG] [2021-06-04 19:46] testDataSource()
+[DEBUG] [2021-06-04 19:46] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-06-04 19:46] LoginTimeout 30
+[DEBUG] [2021-06-04 19:46] testOpenSession()
+[DEBUG] [2021-06-04 19:46] session org.apache.ibatis.session.defaults.DefaultSqlSession@6a484130
+[DEBUG] [2021-06-04 19:46] test01SelectCourseEnrollmentById()
+[DEBUG] [2021-06-04 19:46] ==>  Preparing: select c.course_id, c.name as name, c.description, c.start_date, c.end_date, s.stud_id, s.name, s.email from course_enrollment ce join courses c on ce.course_id = c.course_id join students s on ce.stud_id = s.stud_id where ce.stud_id = ? and ce.course_id = ?;
+[DEBUG] [2021-06-04 19:46] ==> Parameters: 1(Integer), 1(Integer)
+[TRACE] [2021-06-04 19:46] <==    Columns: course_id, name, description, start_date, end_date, stud_id, name, email
+[TRACE] [2021-06-04 19:46] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1, Timothy, timothy@gmail.com
+[DEBUG] [2021-06-04 19:46] <==      Total: 1
+[DEBUG] [2021-06-04 19:46] test02InsertCourseEnrollment()
+[DEBUG] [2021-06-04 19:46] ==>  Preparing: insert into course_enrollment values (?, ?)
+[DEBUG] [2021-06-04 19:46] ==> Parameters: 3(Integer), 1(Integer)
+[DEBUG] [2021-06-04 19:46] <==    Updates: 1
+[DEBUG] [2021-06-04 19:46] test03UpdateCourseEnrollment()
+[DEBUG] [2021-06-04 19:46] ==>  Preparing: update course_enrollment set course_id = ?, stud_id = ? where course_id = ? and stud_id = ?
+[DEBUG] [2021-06-04 19:46] ==> Parameters: 3(Integer), 2(Integer), 3(Integer), 1(Integer)
+[DEBUG] [2021-06-04 19:46] <==    Updates: 1
+[DEBUG] [2021-06-04 19:46] test04DeleteCourseEnrollment()
+[DEBUG] [2021-06-04 19:46] ==>  Preparing: delete from course_enrollment where course_id = ? and stud_id = ?
+[DEBUG] [2021-06-04 19:46] ==> Parameters: 3(Integer), 2(Integer)
+[DEBUG] [2021-06-04 19:46] <==    Updates: 1
+[DEBUG] [2021-06-04 19:46] test01SelectTutorByTutorId()
+[DEBUG] [2021-06-04 19:46] ==>  Preparing: select t.tutor_id , t.name as tutor_name , email , c.course_id , c.name , description , start_date , end_date from tutors t join courses c on t.tutor_id=c.tutor_id where t.tutor_id = ?
+[DEBUG] [2021-06-04 19:46] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:46] <==    Columns: tutor_id, tutor_name, email, course_id, name, description, start_date, end_date
+[TRACE] [2021-06-04 19:46] <==        Row: 1, John, john@gmail.com, 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15
+[DEBUG] [2021-06-04 19:46] test02InsertTutor()
+[DEBUG] [2021-06-04 19:46] ==>  Preparing: INSERT INTO TUTORS(TUTOR_ID, NAME, EMAIL, PHONE, ADDR_ID) VALUES (?, ?, ?, ?, ?)
+[DEBUG] [2021-06-04 19:46] ==> Parameters: 5(Integer), mskim(String), net94@naver.com(String), 010-2222-2222(String), 2(Integer)
+[DEBUG] [2021-06-04 19:46] <==    Updates: 1
+[DEBUG] [2021-06-04 19:46] test03SelectTutorById()
+[DEBUG] [2021-06-04 19:46] ==>  Preparing: select tutor_id, name, email, phone, dob, bio, pic, addr_id from tutors where tutor_id = ?
+[DEBUG] [2021-06-04 19:46] ==> Parameters: 5(Integer)
+[TRACE] [2021-06-04 19:46] <==    Columns: tutor_id, name, email, phone, dob, bio, pic, addr_id
+[TRACE] [2021-06-04 19:46] <==        Row: 5, mskim, net94@naver.com, 010-2222-2222, null, <<BLOB>>, <<BLOB>>, 2
+[DEBUG] [2021-06-04 19:46] <==      Total: 1
+[DEBUG] [2021-06-04 19:46] Tutor [tutorId=5, name=mskim, email=net94@naver.com, address=Address [2, null, null, null, null, null], phone=010-2222-2222, courses=null]
+[DEBUG] [2021-06-04 19:46] test04DeleteTutor()
+[DEBUG] [2021-06-04 19:46] ==>  Preparing: DELETE FROM TUTORS WHERE TUTOR_ID=?
+[DEBUG] [2021-06-04 19:46] ==> Parameters: 5(Integer)
+[DEBUG] [2021-06-04 19:46] <==    Updates: 1
+[DEBUG] [2021-06-04 19:47] test01SelectTutorByTutorId()
+[DEBUG] [2021-06-04 19:47] ==>  Preparing: select t.tutor_id , t.name as tutor_name , email , c.course_id , c.name , description , start_date , end_date from tutors t join courses c on t.tutor_id=c.tutor_id where t.tutor_id = ?
+[DEBUG] [2021-06-04 19:47] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:47] <==    Columns: tutor_id, tutor_name, email, course_id, name, description, start_date, end_date
+[TRACE] [2021-06-04 19:47] <==        Row: 1, John, john@gmail.com, 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15
+[DEBUG] [2021-06-04 19:47] test02InsertTutor()
+[DEBUG] [2021-06-04 19:47] ==>  Preparing: INSERT INTO TUTORS(TUTOR_ID, NAME, EMAIL, PHONE, ADDR_ID) VALUES (?, ?, ?, ?, ?)
+[DEBUG] [2021-06-04 19:47] ==> Parameters: 5(Integer), mskim(String), net94@naver.com(String), 010-2222-2222(String), 2(Integer)
+[DEBUG] [2021-06-04 19:47] <==    Updates: 1
+[DEBUG] [2021-06-04 19:47] test03SelectTutorById()
+[DEBUG] [2021-06-04 19:47] ==>  Preparing: select tutor_id, name, email, phone, dob, bio, pic, addr_id from tutors where tutor_id = ?
+[DEBUG] [2021-06-04 19:47] ==> Parameters: 5(Integer)
+[TRACE] [2021-06-04 19:47] <==    Columns: tutor_id, name, email, phone, dob, bio, pic, addr_id
+[TRACE] [2021-06-04 19:47] <==        Row: 5, mskim, net94@naver.com, 010-2222-2222, null, <<BLOB>>, <<BLOB>>, 2
+[DEBUG] [2021-06-04 19:47] <==      Total: 1
+[DEBUG] [2021-06-04 19:47] Tutor [tutorId=5, name=mskim, email=net94@naver.com, address=Address [2, null, null, null, null, null], phone=010-2222-2222, courses=null]
+[DEBUG] [2021-06-04 19:47] test04DeleteTutor()
+[DEBUG] [2021-06-04 19:47] ==>  Preparing: DELETE FROM TUTORS WHERE TUTOR_ID=?
+[DEBUG] [2021-06-04 19:47] ==> Parameters: 5(Integer)
+[DEBUG] [2021-06-04 19:47] <==    Updates: 1
+[DEBUG] [2021-06-04 19:47] test01SelectTutorByTutorId()
+[DEBUG] [2021-06-04 19:47] ==>  Preparing: select t.tutor_id , t.name as tutor_name , email , c.course_id , c.name , description , start_date , end_date from tutors t join courses c on t.tutor_id=c.tutor_id where t.tutor_id = ?
+[DEBUG] [2021-06-04 19:47] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:47] <==    Columns: tutor_id, tutor_name, email, course_id, name, description, start_date, end_date
+[TRACE] [2021-06-04 19:47] <==        Row: 1, John, john@gmail.com, 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15
+[DEBUG] [2021-06-04 19:47] test02InsertTutor()
+[DEBUG] [2021-06-04 19:47] ==>  Preparing: INSERT INTO TUTORS(TUTOR_ID, NAME, EMAIL, PHONE, ADDR_ID) VALUES (?, ?, ?, ?, ?)
+[DEBUG] [2021-06-04 19:47] ==> Parameters: 5(Integer), mskim(String), net94@naver.com(String), 010-2222-2222(String), 2(Integer)
+[DEBUG] [2021-06-04 19:47] <==    Updates: 1
+[DEBUG] [2021-06-04 19:47] test03SelectTutorById()
+[DEBUG] [2021-06-04 19:47] ==>  Preparing: select tutor_id, name, email, phone, dob, bio, pic, addr_id from tutors where tutor_id = ?
+[DEBUG] [2021-06-04 19:47] ==> Parameters: 5(Integer)
+[TRACE] [2021-06-04 19:47] <==    Columns: tutor_id, name, email, phone, dob, bio, pic, addr_id
+[TRACE] [2021-06-04 19:47] <==        Row: 5, mskim, net94@naver.com, 010-2222-2222, null, <<BLOB>>, <<BLOB>>, 2
+[DEBUG] [2021-06-04 19:47] <==      Total: 1
+[DEBUG] [2021-06-04 19:47] Tutor [tutorId=5, name=mskim, email=net94@naver.com, address=Address [2, null, null, null, null, null], phone=010-2222-2222, courses=null]
+[DEBUG] [2021-06-04 19:47] test04DeleteTutor()
+[DEBUG] [2021-06-04 19:47] ==>  Preparing: DELETE FROM TUTORS WHERE TUTOR_ID=?
+[DEBUG] [2021-06-04 19:47] ==> Parameters: 5(Integer)
+[DEBUG] [2021-06-04 19:47] <==    Updates: 1
+[DEBUG] [2021-06-04 19:48] test01SelectTutorByTutorId()
+[DEBUG] [2021-06-04 19:48] ==>  Preparing: select t.tutor_id , t.name as tutor_name , email , c.course_id , c.name , description , start_date , end_date from tutors t join courses c on t.tutor_id=c.tutor_id where t.tutor_id = ?
+[DEBUG] [2021-06-04 19:48] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:48] <==    Columns: tutor_id, tutor_name, email, course_id, name, description, start_date, end_date
+[TRACE] [2021-06-04 19:48] <==        Row: 1, John, john@gmail.com, 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15
+[DEBUG] [2021-06-04 19:48] test02InsertTutor()
+[DEBUG] [2021-06-04 19:48] ==>  Preparing: INSERT INTO TUTORS(TUTOR_ID, NAME, EMAIL, PHONE, ADDR_ID) VALUES (?, ?, ?, ?, ?)
+[DEBUG] [2021-06-04 19:48] ==> Parameters: 5(Integer), mskim(String), net94@naver.com(String), 010-2222-2222(String), 2(Integer)
+[DEBUG] [2021-06-04 19:48] <==    Updates: 1
+[DEBUG] [2021-06-04 19:48] test03SelectTutorById()
+[DEBUG] [2021-06-04 19:48] ==>  Preparing: select tutor_id, name, email, phone, dob, bio, pic, addr_id from tutors where tutor_id = ?
+[DEBUG] [2021-06-04 19:48] ==> Parameters: 5(Integer)
+[TRACE] [2021-06-04 19:48] <==    Columns: tutor_id, name, email, phone, dob, bio, pic, addr_id
+[TRACE] [2021-06-04 19:48] <==        Row: 5, mskim, net94@naver.com, 010-2222-2222, null, <<BLOB>>, <<BLOB>>, 2
+[DEBUG] [2021-06-04 19:48] <==      Total: 1
+[DEBUG] [2021-06-04 19:48] Tutor [tutorId=5, name=mskim, email=net94@naver.com, address=Address [2, null, null, null, null, null], phone=010-2222-2222, courses=null]
+[DEBUG] [2021-06-04 19:48] test04DeleteTutor()
+[DEBUG] [2021-06-04 19:48] ==>  Preparing: DELETE FROM TUTORS WHERE TUTOR_ID=?
+[DEBUG] [2021-06-04 19:48] ==> Parameters: 5(Integer)
+[DEBUG] [2021-06-04 19:48] <==    Updates: 1
+[DEBUG] [2021-06-04 19:49] test01SelectTutorByTutorId()
+[DEBUG] [2021-06-04 19:49] ==>  Preparing: select t.tutor_id , t.name as tutor_name , email , c.course_id , c.name , description , start_date , end_date from tutors t join courses c on t.tutor_id=c.tutor_id where t.tutor_id = ?
+[DEBUG] [2021-06-04 19:49] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:49] <==    Columns: tutor_id, tutor_name, email, course_id, name, description, start_date, end_date
+[TRACE] [2021-06-04 19:49] <==        Row: 1, John, john@gmail.com, 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15
+[DEBUG] [2021-06-04 19:49] test02InsertTutor()
+[DEBUG] [2021-06-04 19:49] ==>  Preparing: INSERT INTO TUTORS(TUTOR_ID, NAME, EMAIL, PHONE, ADDR_ID) VALUES (?, ?, ?, ?, ?)
+[DEBUG] [2021-06-04 19:49] ==> Parameters: 5(Integer), mskim(String), net94@naver.com(String), 010-2222-2222(String), 2(Integer)
+[DEBUG] [2021-06-04 19:49] <==    Updates: 1
+[DEBUG] [2021-06-04 19:49] test03SelectTutorById()
+[DEBUG] [2021-06-04 19:49] ==>  Preparing: select tutor_id, name, email, phone, dob, bio, pic, addr_id from tutors where tutor_id = ?
+[DEBUG] [2021-06-04 19:49] ==> Parameters: 5(Integer)
+[TRACE] [2021-06-04 19:49] <==    Columns: tutor_id, name, email, phone, dob, bio, pic, addr_id
+[TRACE] [2021-06-04 19:49] <==        Row: 5, mskim, net94@naver.com, 010-2222-2222, null, <<BLOB>>, <<BLOB>>, 2
+[DEBUG] [2021-06-04 19:49] <==      Total: 1
+[DEBUG] [2021-06-04 19:49] Tutor [tutorId=5, name=mskim, email=net94@naver.com, address=Address [2, null, null, null, null, null], phone=010-2222-2222, courses=null]
+[DEBUG] [2021-06-04 19:49] test04DeleteTutor()
+[DEBUG] [2021-06-04 19:49] ==>  Preparing: DELETE FROM TUTORS WHERE TUTOR_ID=?
+[DEBUG] [2021-06-04 19:49] ==> Parameters: 5(Integer)
+[DEBUG] [2021-06-04 19:49] <==    Updates: 1
+[DEBUG] [2021-06-04 19:50] test01SelectCourseEnrollmentById()
+[DEBUG] [2021-06-04 19:50] ==>  Preparing: select c.course_id, c.name as name, c.description, c.start_date, c.end_date, s.stud_id, s.name, s.email from course_enrollment ce join courses c on ce.course_id = c.course_id join students s on ce.stud_id = s.stud_id where ce.stud_id = ? and ce.course_id = ?;
+[DEBUG] [2021-06-04 19:50] ==> Parameters: 1(Integer), 1(Integer)
+[TRACE] [2021-06-04 19:50] <==    Columns: course_id, name, description, start_date, end_date, stud_id, name, email
+[TRACE] [2021-06-04 19:50] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1, Timothy, timothy@gmail.com
+[DEBUG] [2021-06-04 19:50] <==      Total: 1
+[DEBUG] [2021-06-04 19:50] test02InsertCourseEnrollment()
+[DEBUG] [2021-06-04 19:50] ==>  Preparing: insert into course_enrollment values (?, ?)
+[DEBUG] [2021-06-04 19:50] ==> Parameters: 3(Integer), 1(Integer)
+[DEBUG] [2021-06-04 19:50] <==    Updates: 1
+[DEBUG] [2021-06-04 19:50] test03UpdateCourseEnrollment()
+[DEBUG] [2021-06-04 19:50] ==>  Preparing: update course_enrollment set course_id = ?, stud_id = ? where course_id = ? and stud_id = ?
+[DEBUG] [2021-06-04 19:50] ==> Parameters: 3(Integer), 2(Integer), 3(Integer), 1(Integer)
+[DEBUG] [2021-06-04 19:50] <==    Updates: 1
+[DEBUG] [2021-06-04 19:50] test04DeleteCourseEnrollment()
+[DEBUG] [2021-06-04 19:50] ==>  Preparing: delete from course_enrollment where course_id = ? and stud_id = ?
+[DEBUG] [2021-06-04 19:50] ==> Parameters: 3(Integer), 2(Integer)
+[DEBUG] [2021-06-04 19:50] <==    Updates: 1
+[DEBUG] [2021-06-04 19:50] test01SelectTutorByTutorId()
+[DEBUG] [2021-06-04 19:50] ==>  Preparing: select t.tutor_id , t.name as tutor_name , email , c.course_id , c.name , description , start_date , end_date from tutors t join courses c on t.tutor_id=c.tutor_id where t.tutor_id = ?
+[DEBUG] [2021-06-04 19:50] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:50] <==    Columns: tutor_id, tutor_name, email, course_id, name, description, start_date, end_date
+[TRACE] [2021-06-04 19:50] <==        Row: 1, John, john@gmail.com, 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15
+[DEBUG] [2021-06-04 19:50] test02InsertTutor()
+[DEBUG] [2021-06-04 19:50] ==>  Preparing: INSERT INTO TUTORS(TUTOR_ID, NAME, EMAIL, PHONE, ADDR_ID) VALUES (?, ?, ?, ?, ?)
+[DEBUG] [2021-06-04 19:50] ==> Parameters: 5(Integer), mskim(String), net94@naver.com(String), 010-2222-2222(String), 2(Integer)
+[DEBUG] [2021-06-04 19:50] <==    Updates: 1
+[DEBUG] [2021-06-04 19:50] test03SelectTutorById()
+[DEBUG] [2021-06-04 19:50] ==>  Preparing: select tutor_id, name, email, phone, dob, bio, pic, addr_id from tutors where tutor_id = ?
+[DEBUG] [2021-06-04 19:50] ==> Parameters: 5(Integer)
+[TRACE] [2021-06-04 19:50] <==    Columns: tutor_id, name, email, phone, dob, bio, pic, addr_id
+[TRACE] [2021-06-04 19:50] <==        Row: 5, mskim, net94@naver.com, 010-2222-2222, null, <<BLOB>>, <<BLOB>>, 2
+[DEBUG] [2021-06-04 19:50] <==      Total: 1
+[DEBUG] [2021-06-04 19:50] Tutor [tutorId=5, name=mskim, email=net94@naver.com, address=Address [2, null, null, null, null, null], phone=010-2222-2222, courses=null]
+[DEBUG] [2021-06-04 19:50] test04DeleteTutor()
+[DEBUG] [2021-06-04 19:50] ==>  Preparing: DELETE FROM TUTORS WHERE TUTOR_ID=?
+[DEBUG] [2021-06-04 19:50] ==> Parameters: 5(Integer)
+[DEBUG] [2021-06-04 19:50] <==    Updates: 1
+[DEBUG] [2021-06-04 19:52] test01SelectTutorByTutorId()
+[DEBUG] [2021-06-04 19:52] ==>  Preparing: select t.tutor_id , t.name as tutor_name , email , c.course_id , c.name , description , start_date , end_date from tutors t join courses c on t.tutor_id=c.tutor_id where t.tutor_id = ?
+[DEBUG] [2021-06-04 19:52] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:52] <==    Columns: tutor_id, tutor_name, email, course_id, name, description, start_date, end_date
+[TRACE] [2021-06-04 19:52] <==        Row: 1, John, john@gmail.com, 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15
+[TRACE] [2021-06-04 19:52] <==        Row: 1, John, john@gmail.com, 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30
+[DEBUG] [2021-06-04 19:52] <==      Total: 2
+[TRACE] [2021-06-04 19:52] 1 : John
+[DEBUG] [2021-06-04 19:52] Tutor [tutorId=1, name=John, email=john@gmail.com, address=null, phone=null, courses=[Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 0], Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 0]]]
+[DEBUG] [2021-06-04 19:52] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 0]
+[DEBUG] [2021-06-04 19:52] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 0]
+[DEBUG] [2021-06-04 19:52] test02InsertTutor()
+[DEBUG] [2021-06-04 19:52] ==>  Preparing: INSERT INTO TUTORS(TUTOR_ID, NAME, EMAIL, PHONE, ADDR_ID) VALUES (?, ?, ?, ?, ?)
+[DEBUG] [2021-06-04 19:52] ==> Parameters: 5(Integer), mskim(String), net94@naver.com(String), 010-2222-2222(String), 2(Integer)
+[DEBUG] [2021-06-04 19:52] <==    Updates: 1
+[DEBUG] [2021-06-04 19:52] test03SelectTutorById()
+[DEBUG] [2021-06-04 19:52] ==>  Preparing: select tutor_id, name, email, phone, dob, bio, pic, addr_id from tutors where tutor_id = ?
+[DEBUG] [2021-06-04 19:52] ==> Parameters: 5(Integer)
+[TRACE] [2021-06-04 19:52] <==    Columns: tutor_id, name, email, phone, dob, bio, pic, addr_id
+[TRACE] [2021-06-04 19:52] <==        Row: 5, mskim, net94@naver.com, 010-2222-2222, null, <<BLOB>>, <<BLOB>>, 2
+[DEBUG] [2021-06-04 19:52] <==      Total: 1
+[DEBUG] [2021-06-04 19:52] Tutor [tutorId=5, name=mskim, email=net94@naver.com, address=Address [2, null, null, null, null, null], phone=010-2222-2222, courses=null]
+[DEBUG] [2021-06-04 19:52] test04DeleteTutor()
+[DEBUG] [2021-06-04 19:52] ==>  Preparing: DELETE FROM TUTORS WHERE TUTOR_ID=?
+[DEBUG] [2021-06-04 19:52] ==> Parameters: 5(Integer)
+[DEBUG] [2021-06-04 19:52] <==    Updates: 1
+[DEBUG] [2021-06-04 19:53] testDataSource()
+[DEBUG] [2021-06-04 19:53] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-06-04 19:53] LoginTimeout 30
+[DEBUG] [2021-06-04 19:53] testOpenSession()
+[DEBUG] [2021-06-04 19:53] session org.apache.ibatis.session.defaults.DefaultSqlSession@6a484130
+[DEBUG] [2021-06-04 19:53] test01SelectCourseEnrollmentById()
+[DEBUG] [2021-06-04 19:53] ==>  Preparing: select c.course_id, c.name as name, c.description, c.start_date, c.end_date, s.stud_id, s.name, s.email from course_enrollment ce join courses c on ce.course_id = c.course_id join students s on ce.stud_id = s.stud_id where ce.stud_id = ? and ce.course_id = ?;
+[DEBUG] [2021-06-04 19:53] ==> Parameters: 1(Integer), 1(Integer)
+[TRACE] [2021-06-04 19:53] <==    Columns: course_id, name, description, start_date, end_date, stud_id, name, email
+[TRACE] [2021-06-04 19:53] <==        Row: 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15, 1, Timothy, timothy@gmail.com
+[DEBUG] [2021-06-04 19:53] <==      Total: 1
+[DEBUG] [2021-06-04 19:53] test02InsertCourseEnrollment()
+[DEBUG] [2021-06-04 19:53] ==>  Preparing: insert into course_enrollment values (?, ?)
+[DEBUG] [2021-06-04 19:53] ==> Parameters: 3(Integer), 1(Integer)
+[DEBUG] [2021-06-04 19:53] <==    Updates: 1
+[DEBUG] [2021-06-04 19:53] test03UpdateCourseEnrollment()
+[DEBUG] [2021-06-04 19:53] ==>  Preparing: update course_enrollment set course_id = ?, stud_id = ? where course_id = ? and stud_id = ?
+[DEBUG] [2021-06-04 19:53] ==> Parameters: 3(Integer), 2(Integer), 3(Integer), 1(Integer)
+[DEBUG] [2021-06-04 19:53] <==    Updates: 1
+[DEBUG] [2021-06-04 19:53] test04DeleteCourseEnrollment()
+[DEBUG] [2021-06-04 19:53] ==>  Preparing: delete from course_enrollment where course_id = ? and stud_id = ?
+[DEBUG] [2021-06-04 19:53] ==> Parameters: 3(Integer), 2(Integer)
+[DEBUG] [2021-06-04 19:53] <==    Updates: 1
+[DEBUG] [2021-06-04 19:53] test01SelectTutorByTutorId()
+[DEBUG] [2021-06-04 19:53] ==>  Preparing: select t.tutor_id , t.name as tutor_name , email , c.course_id , c.name , description , start_date , end_date from tutors t join courses c on t.tutor_id=c.tutor_id where t.tutor_id = ?
+[DEBUG] [2021-06-04 19:53] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-04 19:53] <==    Columns: tutor_id, tutor_name, email, course_id, name, description, start_date, end_date
+[TRACE] [2021-06-04 19:53] <==        Row: 1, John, john@gmail.com, 1, Quickstart Core Java, Core Java Programming, 2013-03-01, 2013-04-15
+[TRACE] [2021-06-04 19:53] <==        Row: 1, John, john@gmail.com, 2, Quickstart JavaEE6, Enterprise App Development using JavaEE6, 2013-04-01, 2013-08-30
+[DEBUG] [2021-06-04 19:53] <==      Total: 2
+[TRACE] [2021-06-04 19:53] 1 : John
+[DEBUG] [2021-06-04 19:53] Tutor [tutorId=1, name=John, email=john@gmail.com, address=null, phone=null, courses=[Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 0], Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 0]]]
+[DEBUG] [2021-06-04 19:53] Course [1 Quickstart Core Java Core Java Programming Fri Mar 01 00:00:00 KST 2013 Mon Apr 15 00:00:00 KST 2013 0]
+[DEBUG] [2021-06-04 19:53] Course [2 Quickstart JavaEE6 Enterprise App Development using JavaEE6 Mon Apr 01 00:00:00 KST 2013 Fri Aug 30 00:00:00 KST 2013 0]
+[DEBUG] [2021-06-04 19:53] test02InsertTutor()
+[DEBUG] [2021-06-04 19:53] ==>  Preparing: INSERT INTO TUTORS(TUTOR_ID, NAME, EMAIL, PHONE, ADDR_ID) VALUES (?, ?, ?, ?, ?)
+[DEBUG] [2021-06-04 19:53] ==> Parameters: 5(Integer), mskim(String), net94@naver.com(String), 010-2222-2222(String), 2(Integer)
+[DEBUG] [2021-06-04 19:53] <==    Updates: 1
+[DEBUG] [2021-06-04 19:53] test03SelectTutorById()
+[DEBUG] [2021-06-04 19:53] ==>  Preparing: select tutor_id, name, email, phone, dob, bio, pic, addr_id from tutors where tutor_id = ?
+[DEBUG] [2021-06-04 19:53] ==> Parameters: 5(Integer)
+[TRACE] [2021-06-04 19:53] <==    Columns: tutor_id, name, email, phone, dob, bio, pic, addr_id
+[TRACE] [2021-06-04 19:53] <==        Row: 5, mskim, net94@naver.com, 010-2222-2222, null, <<BLOB>>, <<BLOB>>, 2
+[DEBUG] [2021-06-04 19:53] <==      Total: 1
+[DEBUG] [2021-06-04 19:53] Tutor [tutorId=5, name=mskim, email=net94@naver.com, address=Address [2, null, null, null, null, null], phone=010-2222-2222, courses=null]
+[DEBUG] [2021-06-04 19:53] test04DeleteTutor()
+[DEBUG] [2021-06-04 19:53] ==>  Preparing: DELETE FROM TUTORS WHERE TUTOR_ID=?
+[DEBUG] [2021-06-04 19:53] ==> Parameters: 5(Integer)
+[DEBUG] [2021-06-04 19:53] <==    Updates: 1
